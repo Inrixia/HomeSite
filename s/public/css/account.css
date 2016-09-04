@@ -1,0 +1,78 @@
+.active {
+	background-color: #000000;
+}
+
+.container {
+	margin-left: 100px;
+}
+
+html, body {
+	position: relative;
+}
+
+@media (max-width: 1000px) {
+	html, body {
+		position: fixed;
+	}
+}
+
+.side-nav {
+	position: fixed;
+	top: 0px;
+	left: 225px;
+	width: 225px;
+	margin-left: -225px;
+	border: none;
+	border-radius: 0;
+	overflow-y: auto;
+	background-color: #191919;
+	bottom: 0;
+	overflow-x: hidden;
+	padding-bottom: 40px;
+	font-size: 18px;
+	font-variant: small-caps;
+	padding-left: 10px;
+}
+
+.side-nav>li>a {
+	width: 225px;
+}
+
+.side-nav li a:hover,
+	.side-nav li a:focus {
+		outline: none !important;
+		color: white;
+		background-color: #000;
+		-webkit-filter: drop-shadow(0px 0px 0px rgb(0,0,0)) !important;
+	}
+}
+
+.side-nav>li>ul {
+	padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+  display: block;
+  padding: 10px 15px 10px 38px;
+  text-decoration: none;
+}
+
+.user-settings {
+	background-color: #191919 !important;
+	color: white !important;
+}
+.container-fluid {
+	padding-left: 5px;
+	text-align:center;
+}
+#wrapper {
+	width: 1250px !important;
+	padding-left: 0;
+}
+.detail {
+	text-align: center;
+}
+.logoimg {
+	width: 600px;
+	margin-left: 150px;
+}

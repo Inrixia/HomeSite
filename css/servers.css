@@ -1,0 +1,52 @@
+body {
+  background: url(http://i.imgur.com/YwdeJyz.png) repeat center center fixed;
+  background-size: cover;
+}
+
+.plyr {
+  padding-top: 15px;
+}
+
+.detail {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.motd {
+  padding-bottom: 10px;
+}
+
+.player p {
+  color: white;
+}
+
+.players {
+  padding-bottom: 1vw;
+}
+
+.header p { 
+  color: white;
+}
+
+.picintwo {
+  position: relative;
+  -webkit-animation-name: picintwo; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  animation-name: picintwo;
+  animation-duration: 4s;
+}
+
+@keyframes picintwo {
+    0%   {top: -100px;}
+    100% {top: 0px;}
+}
+
+
+
+.Serv1 {
+  padding-bottom: 150px;
+}
+
+.Serv2 {
+  padding-top: 150px;
+}

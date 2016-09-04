@@ -1,0 +1,25 @@
+html, body {
+	background-color: #36393E;
+}
+.fullscreenDiv {
+  text-align: center;
+  margin-top: 50vh;
+  color: white;
+  font: 50px "Open Sans", sans-serif;
+  font-weight: 0;
+}​
+input {
+}
+input {
+	width: 90px;
+	height: 35px;
+	border: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background-color: #3598DC;
+	font-size: 22px;
+}
+input:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #3598DC;
+	background-color: white;
+}

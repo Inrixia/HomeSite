@@ -1,0 +1,103 @@
+html, body{
+	background-image: url("../img/background-login.png") !important;
+	background-size: cover;
+}
+
+.content {
+	text-align: center;
+	color: black;
+	padding-top: 70px;
+	height: 100%;
+}
+
+.panel-login {
+	width: 500px;
+	display: inline-block;
+	border: none;
+	background: none;
+}
+
+.form-group {
+	display: inline-block;
+	width: 360px;
+}
+
+.form-control {
+	background-color: rgba(0,0,0,.1);
+	background-repeat: no-repeat;
+	border-radius: 0 !important;
+	border-color: rgba(0,0,0,.1);
+	color: white;
+	height: 60px;
+}
+
+.input {
+	color: white !important;
+}
+
+.space-me {
+	margin-bottom: 0;
+}
+
+.logo-big {
+	height: 100px;
+}
+
+.login-message {
+	font-size: 25px;
+	padding-top: 10px;
+	letter-spacing: 1px;
+	color: white;
+	margin-bottom: 15px;
+	margin-right: 160px;
+	font-variant: small-caps;
+}
+
+.register {
+	margin-right: 0px !important;
+	display: inline-block;
+	font-size: 20px;
+	color: #fefefe;
+	font-variant: normal !important;
+}
+
+.tab-message {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.tab-message:hover {
+	text-decoration: none;
+}
+
+.login-message .pl {
+	font-size: 20px;
+	color: #fefefe;
+	font-variant: normal !important;
+}
+
+.panel-body {
+	padding-top:0;
+}
+
+.info {
+	display: inline-block;
+}
+
+.user-login-button {
+	width: 300px;
+	height: 40px;
+	background-color: #1087DD !important;
+	border-color: #1087DD !important;
+}
+
+.user-login-button:hover {
+	background-color: rgb(13,106,173) !important;
+	border-color: rgb(13,106,173) !important;
+}
+
+
+.user-login-button:active {
+	background-color: rgb(10,86,140) !important;
+	border-color: rgb(8,76,124) !important;
+}

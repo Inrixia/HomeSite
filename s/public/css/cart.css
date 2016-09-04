@@ -1,0 +1,65 @@
+.item {
+	width: 90px !important;
+	height: 90px !important;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+    vertical-align: bottom;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.heading {
+	font-size: 16px;
+	font-variant: small-caps;
+}
+
+.imgcont {
+	width: 140px;
+	padding-left: 25px;
+}
+.cost {
+	width: 40px;
+	text-align: center;
+}
+.overtotal {
+    color: #85cc39;
+}
+.sum {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: #337AB7;
+    background: none !important;
+
+}
+.hiding {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+.button-buy {
+    color: #FFFFFF;
+    background-color: #337AB7;
+    width: 120px !important;
+    font-size: 23px !important;
+    height: 40px !important;
+}
+.button-buy:hover {
+    background-color: #ffffff;
+    color: #337AB7;
+}
+.nocart {
+    width: 200px;
+}

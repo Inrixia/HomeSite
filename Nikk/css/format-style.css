@@ -1,0 +1,491 @@
+* {																/*Styling for main page. Sets borders and padding to 0 to get smooth look*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+@font-face { 													/*Styling in the fonts for the website. The font is held within a file in the website folder*/
+	font-family: "conthrax-sb";
+	src: url(Fonts/conthrax-sb.ttf) format("truetype");
+}
+html,
+body { 															/*The styling for the main page. Overflow hidden here is extremely important as it stops the navigation pieces form being visible when the menu is closed*/
+	height: 100%;
+	overflow: hidden;
+}
+.content_inner { 												/*The styling for the text and stuff within the page*/
+	height: 100%; 												/*If .content in navigation.css is set to height: 200%; This needs to be set to 50% but only if the background is an image*/
+	overflow-y: auto;
+}
+h1 { 															/*Styling for the Heading*/
+	font-family: "conthrax-sb";
+}
+h3 {															/*Styling for the Heading*/
+	font-family: "arial";
+	color: #207cca;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+h4 {
+	font-family: "conthrax-sb";
+	font-size: 18px;
+	text-decoration: underline;
+}
+body {															/*Text colour for the website and the text alignment. I thought justify would be nice as all the text lines up along the edges*/
+	color: #B6B6B6;
+	text-align: justify;
+}
+.wrapper {														/*Styling for the main wrapper. This contains all information*/
+ 	background: linear-gradient(#050505, #7f7f7f);
+	padding: 0 10%;
+	color: rgba(240,240,240,1);
+	height: auto;
+	display: -webkit-box; /*                                             .__....._             _.....__'                                            */
+	display: -moz-box;/*                                                   .": o :':         ;': o :".                                              */
+	display: -ms-flexbox;/*                                                '. '-' .'.       .'. '-' .'                                              */
+	display: -webkit-flex;/*                                                 '---'             '---'                                                */
+	display: flex;                                   
+	-webkit-flex-flow: row wrap;/*                                 _...----...      ...   ...      ...----..._                                      */
+	flex-flow: row wrap;/*                                      .-'__..-""'----    '.  '"'  .'    ----'""-..__'-.      Meow                         */
+	font-weight: bold;/*                                       '.-'   _.--"""'       '-._.-'       '"""--._   '-.'                                  */
+	text-align: center;/*							           '  .-"'                  :                  '"-.  '                                  */
+}/*                                                              '   '.              _.'"'._              .'   '                                    */
+.wrapper > *{/*                                                        '.       '.-'"       "'-.'       .'                                          */
+	padding: 10px;/*                                                     '.                           .'  ok, so really funny story about this cat  */
+	flex: 1 100%;/*                                                        '-._                   _.-'  When making it, I took it off an online     */
+}/*                                                                            '"'--...___...--'"'   ASCII art website, except the , and ' where    */
+.header{ /*                           the wrong type of styling, when I tried changing them all using the find option in notepad++, it changed      */
+	text-align: center;/*             the single , as well on the html,body styling. I had to redownload an old copy of my website and go through   */
+	text-shadow:
+    -1px -1px 0 rgba(0,0,0,300),
+    1px -1px 0 rgba(0,0,0,300),
+    -1px 1px 0 rgba(0,0,0,300),
+    1px 1px 0 rgba(0,0,0,300);/*  	  each file and copying them over to see any differences.														*/
+	border-bottom: 0.1px solid #656565;/*It took me over 3 hours to finally figure out exactly what the problem was and I ended up face palming at  */
+	padding-top: 14%;/*           	  this tiny mistake. All because of this stupid little cat that I wanted as a secret part of my website, it     */
+}/*									  completely broke my website for over 3 hours                                                                	*/
+.main{
+	text-align: left;
+	border-top: 0px;
+	border-left: 0px;											/*Styling for the main block*/
+	border-bottom: 0px;
+	font-size: 16px;
+	background-color: rgba(0,0,0,0.4);
+}
+.aside{															/*Styling for the aside block*/
+	text-align: left;
+	font-size: 16px;
+	background-color: rgba(0,0,0,0.4);
+}
+.footer {														/*Styling for the footer block at the bottom of the page*/
+	text-align: left;
+	border-top: 0.3px solid #9f9f9f;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+	padding-bottom: 3%;
+	padding-right: 0%;
+}
+@media all and (min-width: 600px) {								/*Media querries for the flex box*/
+.aside {
+	flex: 2 70;}
+}
+@media all and (min-width: 800px) {								/*More media querries for the flex box*/
+.main {
+	flex: 4 20%;}
+.main {
+	order: 2;}
+.aside {
+	order: 3;}
+.footer {
+	order: 4;}
+}
+
+/*Responsive settings*/
+/*Screen sizes 1080*/
+@media only screen and (min-width:1800px) and (max-width:2000px){
+    .menu_items {
+		left: 2%;
+	}
+    .menu_toggle { /*The styling for the button*/
+        width: 5%;
+    }
+}
+/*Screen sizes 2k and 4k*/
+@media only screen and (min-width:2000px) and (max-width:5000px){
+    .menu_items {
+        left: 1.2%;
+    }
+    .menu_toggle { /*The styling for the button*/
+        width: 3%;
+        height: 4%;
+    }
+    .main img {
+	width: 10%;
+	height: 10%;
+	}
+	.aside img {
+		width: 10%;
+		height: 10%;
+	}
+	.wrapper {
+		padding: 0 4%;
+	}
+}
+
+/*Phone size responsive settings - Portraite*/
+@media only screen and (max-width:760px){
+	.main {
+		border-right: 0px;
+		border-bottom: 2px solid #f0f0f0;
+		font-size: 11px;
+	}
+	.aside {
+		font-size: 11px;
+	}
+	.header {
+		font-size: 12px;
+		padding-top: 17%;
+		border-bottom: 0;
+	}
+	#social ul li a{
+		font-size: 11px;
+	}
+	video {
+		display: none;
+	}
+	.page {
+		background: url(http://i.imgur.com/SQZxKYv.png) no-repeat;
+		background-size: cover;
+		background-position: left;
+	}
+	.menu_items {
+		left: 6%;
+	}
+	.menue_itmes a {
+		text-decoration: bold;
+		text-shadow:
+	    -0.4px -0.4px 0 rgba(0,0,0,300),
+	    0.4px -0.4px 0 rgba(0,0,0,300),
+	    -0.4px 0.4px 0 rgba(0,0,0,300),
+	    0.4px 0.4px 0 rgba(0,0,0,300);
+	}
+	h4 {
+		font-size: 13px
+	}
+	.button a {
+		font-size: 11px;
+	}
+	.button{
+		right: 0%;
+	    position: relative;
+	}
+	#linksnzqa ul {
+		font-size: 11px;
+	}
+	.menu_toggle { /*The styling for the button*/
+		width: 25%;
+		height: 9%;
+	}
+	.videoWrapper iframe {
+		width: 100%;
+	}
+	.mainimg2 {
+		width: 40%;
+		height: 40%;
+	}
+}
+/*Phone responsive settings - Landscape - Ipod, samsung*/
+@media only screen and (max-height:380px) and (max-width:680px){
+	.menu_items {
+	left: 2.6%;
+	}
+	.menue_itmes a {
+	font-size: 2vw;
+	text-decoration: bold;
+	text-shadow:
+    -0.4px -0.4px 0 rgba(0,0,0,300),
+    0.4px -0.4px 0 rgba(0,0,0,300),
+    -0.4px 0.4px 0 rgba(0,0,0,300),
+    0.4px 0.4px 0 rgba(0,0,0,300);
+	}
+	.menu_toggle { /*The styling for the button*/
+	width: 15%;
+	height: 16%;
+	}
+	.button a {
+	font-size: 15px;
+	}
+	.header {
+	padding-top: 14%;
+	}
+}
+/*Phone responsive settings - Landscape - Nexus phones*/
+@media only screen and  (max-height:450px) and (max-width:780px){
+	.main {
+	border-right: 0px;
+	border-bottom: 2px solid #f0f0f0;
+	font-size: 11px;
+	}
+	.menu_items {
+	left: 3%;
+	}
+	.menue_itmes a {
+	font-size: 2vw;
+	text-decoration: bold;
+	text-shadow:
+    -0.4px -0.4px 0 rgba(0,0,0,300),
+    0.4px -0.4px 0 rgba(0,0,0,300),
+    -0.4px 0.4px 0 rgba(0,0,0,300),
+    0.4px 0.4px 0 rgba(0,0,0,300);
+	}
+	.menu_toggle { /*The styling for the button*/
+	width: 15%;
+	height: 16%;
+	}
+	.button a {
+	font-size: 15px;
+	}
+	.header {
+	padding-top: 11%;
+	}
+}
+
+
+
+
+/*Ipad responsive settings - Portrait*/
+@media only screen and (max-width:800px)  and (min-width:760px){
+	.main {
+	border-right: 0px;
+	border-bottom: 2px solid #f0f0f0;
+	font-size: 15px;
+	}
+	.aside {
+	font-size: 15px;
+	}
+	.header {
+	font-size: 18px;
+	padding-top: 28%;
+	}
+	#social ul li a{
+	font-size: 14px;
+	}
+	video {
+	display: none;
+	}
+	.page {
+	background: url(http://i.imgur.com/SQZxKYv.png) no-repeat;
+	background-size: cover;
+	background-position: left;
+	}
+	.menue_itmes a {
+	text-decoration: bold;
+	text-shadow:
+    -0.6px -0.6px 0 rgba(0,0,0,300),
+    0.6px -0.6px 0 rgba(0,0,0,300),
+    -0.6px 0.6px 0 rgba(0,0,0,300),
+    0.6px 0.6px 0 rgba(0,0,0,300);
+	}
+	h4 {
+	font-size: 16px
+	}
+	.button a {
+	font-size: 15px;
+	}
+	#linksnzqa ul {
+	font-size: 15px;
+	}
+	.menu_items {
+	left: 4%;
+	}
+	.menu_items li:nth-child(3) {
+	margin-left: 23%;
+	}
+	.menu_items li:nth-child(4) {
+	margin-left: 43%
+	}
+	.menu_toggle { /*The styling for the button*/
+	width: 15%;
+	}
+}
+/*Respsonsive settings - IPad - landscape*/
+@media only screen and (max-width:1025px)  and (min-width:900px) and (max-height:769px) and (min-height:740px){
+	video {
+	display: none;
+	}
+	.page {
+	background: url(http://i.imgur.com/SQZxKYv.png) no-repeat;
+	background-size: cover;
+	background-position: left;
+	}
+}
+/*End responsive settings*/
+
+
+
+
+
+#clockbox{															/*Website' inbuilt clock styling*/
+	font-family: "Calibri";
+	color: #207cca;
+	font-size: 16px;}
+	
+.aside #message img {												/*Styling for the aside block images*/
+	width: 70%;
+	height: 70%;
+	background-color: rgba(300,300,300,0.4);
+}
+#ulearn {															/*Styling for the image with id Ulearn*/
+	width: 37%;
+	height: 37%;
+}
+#message {															/*styling for the message span*/
+	text-align: left;
+}
+#linksnzqa ul {														/*styling for the links list in the aside block*/
+	font-size: 16px;
+	width: 100%;
+}
+#linksnzqa li a {													/*Styling for the links themselves in the aside block*/
+	text-decoration: none;
+	color: #003E94;
+	-webkit-transition: color .5s;
+  	transition: color .5s;
+}
+#linksnzqa li a:hover {												/*Hover attribute for the links*/
+	text-decoration: none;
+	color: #ff3838;
+}
+#linksnzqa li a:active {											/*Active attribute for the links*/
+	text-decoration: none;
+	color: #ff3838;
+}
+
+#social{															/*Styling for the social buttons group*/
+	position: relative;
+	height: 0%;
+	bottom: 100%;
+	width: 20%;
+	left: 79%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+}
+#share-buttons span {												/*Styling for the social buttons span*/
+	display: inline;
+}
+#share-buttons span a{												/*Styling for the links*/
+	text-decoration: none;
+	padding: 0;
+	color: #fff;
+}
+#social a:hover{													/*On hover links styling*/
+	color: #E3204C;
+	-webkit-transition: color .3s;
+	transition: color .3s;
+}
+span#share-buttons{													/*styling for span of shar buttons*/
+  	list-style: none;
+  	padding: 0;
+}
+
+span#share-buttons li{												/*Styling of the list with which the share buttons exist*/
+  	display: inline;
+}
+/*videos and inbuilt movies*/
+#video-bg {															/*styling for the video wallpaper*/
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100vw	!important;
+	height: auto 	!important; /*have this as auto if screen resolution at school is fine*/
+	z-index: -1;
+	background: transparent url(http://i.imgur.com/pQkkLRh.png) no-repeat;
+	background-size: cover;
+}
+
+
+/*Images on main page*/
+.mainimg1 {															/*Main image 1 - text book image on main page*/
+	width: 40%;
+	height: 40%;
+	position: relative;
+	right: 0%;
+}
+/*main stuff*/
+.mainlists ul {														/*Styling for all lists on the main page*/
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.mainlists li {														/*styling for the individual items in the list*/
+	font-style: italic;
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+
+.mainlists li:before {												/*more styling for lists on main page*/
+    content: "\002022 ";
+	padding: 0.5em;
+    color: #207cca; /* or whatever color you prefer */
+}
+.main h2 {															/*Styling for all headers(2) on the main block*/
+	text-decoration: underline;
+}
+.mainimg2{															/*Styling for all images on the main block*/
+	background-color: rgba(240,240,240,1);
+	float: right;
+	position: relative;
+	width: 30%;
+	height: 30%;
+}
+ul {																/*Styling for all unlisted lists*/
+    list-style-type: none;
+}
+.videoWrapper {														/*Styling for youtube video div*/
+	position: relative;
+	padding-bottom: 35%;
+	height: 0;
+}
+.videoWrapper iframe {												/*styling for youtube video, video itself*/
+	position: absolute;
+	border: 0;
+	border-radius: 1%;
+	top: 0;
+	left: 15%;
+	width: 70%;
+	height: 100%;
+}
+.header{
+    -webkit-transition: background-color 0.6s ease-out;
+    -moz-transition: background-color 0.6s ease-out;
+    -o-transition: background-color 0.6s ease-out;
+    transition: background-color 0.6s ease-out;
+  	background-color: rgba(0,0,0,0);
+}
+.shazam .header{
+    -webkit-transition: background-color 0.6s ease-out;
+    -moz-transition: background-color 0.6s ease-out;
+    -o-transition: background-color 0.6s ease-out;
+    transition: background-color 0.6s ease-out;
+  	background-color: #050505;
+  	border: 0.1px solid #050505;
+}
+
+.footer{
+    -webkit-transition: background-color 0.6s ease-out;
+    -moz-transition: background-color 0.6s ease-out;
+    -o-transition: background-color 0.6s ease-out;
+    transition: background-color 0.6s ease-out;
+  	background-color: rgba(0,0,0,0);
+}
+.shazam .footer{
+    -webkit-transition: background-color 0.6s ease-out;
+    -moz-transition: background-color 0.6s ease-out;
+    -o-transition: background-color 0.6s ease-out;
+    transition: background-color 0.6s ease-out;
+  	background-color: #7f7f7f;
+  	border: 0.1px solid #7f7f7f;
+}

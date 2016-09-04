@@ -1,0 +1,22 @@
+.purchases_container {
+	width: 600px;
+	text-align: center;
+	display: inline-block;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+    vertical-align: bottom;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(211, 211, 211, 0.3);
+}

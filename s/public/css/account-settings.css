@@ -1,0 +1,16 @@
+.page-header {
+	padding-left: 5px;
+}
+
+.change-details-form {
+	padding-left: 20px;
+}
+
+form {
+	display: inline-block;
+	width: 300px;
+}
+
+.center {
+	text-align: center;
+}

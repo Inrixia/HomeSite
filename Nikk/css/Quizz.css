@@ -1,0 +1,69 @@
+.button a {
+	-webkit-transition: color .2s;
+	transition: color .2s;
+	-webkit-transition: border-color .6s;
+	transition: border-color .6s;
+    text-decoration: none;
+	color: #cfcfcf;
+	font-size: 12px;
+    border-width: 2px;
+	border-style: solid;
+	border-color: rgba(240,240,240,1);
+    width: 10%;
+    padding-top: 0.4%;
+    padding-bottom: 0.4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative;
+    bottom: 10%;
+	right: -85%;
+	text-align: center;
+}
+.button:hover a {
+	-webkit-transition: color .2s;
+	transition: color .2s;
+	-webkit-transition: border-color .6s;
+	transition: border-color .6s;
+    text-decoration: none;
+    color: white;
+    border-color: #E3204C;
+}
+
+
+#title {
+    text-decoration: underline;
+}
+
+#quiz {
+    text-indent: 0;
+    display:none;
+}
+.button a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+#container {
+    width: 100%;
+    margin: auto;
+    padding: 0 1% 2% 1%;
+    border-top: 1px solid #fff;
+    color: #FFFFFF;
+    position: relative;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#prev {
+    display:none;
+}
+
+#start {
+    display:none;
+    width: 90px;
+}

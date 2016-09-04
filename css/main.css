@@ -1,0 +1,122 @@
+.Box{
+  text-align:center;
+  padding:40px;
+}
+
+#particles-js  > p {
+  position:absolute;
+  top:100px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background:transparent;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: cover;
+  position: absolute;
+}
+
+.jumbotron {
+ 	color: white;
+ 	text-shadow: #444 0 1.2px 1.2px;
+  background: transparent;
+  text-align: center;
+  position:relative;
+}
+
+.header {
+	padding-bottom: 0;
+  padding-top: 0;
+}
+
+.header img {
+  width: auto 9;
+  height: auto;
+	margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 420px) {
+  .header img {
+    max-width: 350px;
+    max-height: 350px;
+  }
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1; 
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.a {
+  -webkit-animation-delay: 2.2s;
+  -moz-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+.fade-in.aa {
+  -webkit-animation-delay: 2.4s;
+  -moz-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+.fade-in.aaa {
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+.fade-in.aaaa {
+  -webkit-animation-delay: 2.8s;
+  -moz-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.fade-in.aaaaa {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.fade-in.two {
+  -webkit-animation-delay: .7s;
+  -moz-animation-delay: .7s;
+  animation-delay: .7s;
+}
+.fade-in.three {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.picin {
+  position: relative;
+  -webkit-animation-name: picin; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+  animation-name: picin;
+  animation-duration: 3s;
+}
+
+@keyframes picin {
+    0%   {top: -80px;}
+    100% {top: 0px;}
+}

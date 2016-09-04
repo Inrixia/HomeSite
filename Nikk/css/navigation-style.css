@@ -1,0 +1,200 @@
+.page {                                                                                                                     /*Main box, This is bascially the whole page including the navigation bar that extends over the side of the canvas*/
+  height: 100%;
+  z-index: -1;
+}
+.content {                                                                                                                  /*This is the styling for the stuff that is actually on the page, the content on the page, excluding navigation*/
+	height: 100%;                                                                                                             /*This height styles the length of the page that swings out. At 200%, the page swings out but still looks like it takes up a hidden portion of the page*/
+	-webkit-transform-origin: top left;
+			transform-origin: top left;
+	-webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+	transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+	transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+	transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+	/*background-image: url('http://i.imgur.com/RegkiuW.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+	z-index: 2;
+}
+.content_inner {
+}
+/* basically all styling from now on - Desktop Computers*/
+.menu_toggle {                                                                                                              /*The styling for the button*/
+	z-index: 900;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	cursor: pointer;
+	width: 6.5%;
+	height: 7.6%;
+	background-color: #5B5173;
+	border-bottom-right-radius: 100%;
+}
+.menu_toggle:active i {                                                                                                     /*The icon button when clicked. This is the little bars that show a menu icon and the X icon that is to close the menu.*/
+	opacity: 0.8;
+}
+.menu_toggle i {                                                                                                            /*The colour of the actual icon for the menu icons*/
+	color: #f0f0f0;
+}
+.menu_toggle .menu_open,
+.menu_toggle .menu_close {                                                                                                  /*Position and styling of the button in its entirety*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -12px;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+}
+.menu_toggle .menu_open {                                                                                                   /*This is the transformation of the actual button so that it moves in relation to the rotation*/
+  -webkit-transform-origin: -100px -100px;
+          transform-origin: -100px -100px;
+}
+.menu_toggle .menu_close {                                                                                                  /*This is the rotation of the button so that it rotates through the two i tags so it moves from the bars representing the menu and the X icon.*/
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-transform-origin: -100px -160px;
+          transform-origin: -100px -160px;
+}
+.menu_items {                                                                                                               /*The general positioning and styling of the items as a block (navigation links)*/
+  position: fixed;
+  bottom: 0;
+  left: 3%;
+  top: 52%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+.menu_items li {                                                                                                            /*The general positioning and styling of the items as individual items*/
+  height: 15%; /*157.5 pixels*/
+  margin-bottom: 12%; /*126 pixels*/
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+}
+.menu_items li:nth-child(2) {                                                                                               /*The styling of the child items for the navigation. Each child represents an individual item. The positioning of these makes the buttons appear at an angle parallel to the page*/
+  margin-left: 16%;
+}
+.menu_items li:nth-child(3) {
+  margin-left: 28%;
+}
+.menu_items li:nth-child(4) {
+  margin-left: 50%;
+}
+.menu_items li:nth-child(1) a .icon:after {                                                                                 /*Styling of the border sizes for the icons for the navigation menu*/
+	width: 190%;
+	height: 190%;
+	margin-left: -102%;
+	margin-top: -94%;
+}
+.menu_items li:nth-child(2) a .icon:after {
+	width: 338%;
+	height: 190%;
+	margin-left: -187%;
+	margin-top: -170%;
+}
+.menu_items li:nth-child(3) a .icon:after {
+	width: 170%;
+	height: 197%;
+	margin-left: -91%;
+	margin-top: -87%;
+}
+.menu_items li:nth-child(4) a .icon:after {
+	width: 225%;
+	height: 190%;
+	margin-left: -130%;
+	margin-top: -113%;
+}
+.menu_items a {                                                                                                              /*This is the styling for the actual words within the li tag. The button links with their names.*/
+	font-size: 2vh;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #a4a4a4;
+	-webkit-transition: color .2s;
+	transition: color .2s;
+	text-shadow:
+    -1px -1px 0 rgba(0,0,0,300),
+    1px -1px 0 rgba(0,0,0,300),
+    -1px 1px 0 rgba(0,0,0,300),
+    1px 1px 0 rgba(0,0,0,300); 
+}
+.menu_items a .icon {                                                                                                       /*The icon colour and styling for the navigation links*/
+  position: relative;
+  display: inline-block;
+  margin-right: 1.5%;
+  color: #f0f0f0;
+}
+.menu_items a .icon:after {                                                                                                 /*The styling of the border around the icons so that they have a nice clean circle around the icon.*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  display: block;
+  border-radius: 100%;
+  border: 2px solid #f0f0f0;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+}
+.menu_items a:hover {                                                                                                       /*When hovering the mouse over the link, it changes colour to a brighter white*/
+	color: #f0f0f0;
+}
+.menu_items a:hover .icon:after {                                                                                           /*When hovering the mouse over the link, it changes the colour of the border to a red-ish colour*/
+	border-color: #E3204C;
+}
+.menu_items a:active .icon {                                                                                                /*When you click on the link, it changes colour*/
+	color: #E3204C;
+}
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/
+}
+.shazam .content {                                                                                                          /*when the javascript toggles the content to shazam, it rotates the content*/
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+}
+.shazam .menu_open {                                                                                                        /*when the javascript toggles the content to shazam, it rotates the menu button*/
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+}
+.shazam .menu_close {                                                                                                       /*when the javascript toggles the content off of shazam, it rotates the menu button closed*/
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.shazam .menu_items li {                                                                                                    /*when the javascript toggles the content to shazam, it translates the menu items (navigation buttons) across the page so they're no longer hidden*/
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.shazam .menu_items li:nth-child(2) {                                                                                       /*The animation timing for the shazam menu items movement. This is different for each child so that they appear to bounce across the screen at slightly slower speeds to the item before it.*/
+  -webkit-transition-delay: .47s;
+          transition-delay: .47s;
+}
+.shazam .menu_items li:nth-child(3) {
+  -webkit-transition-delay: .48s;
+          transition-delay: .48s;
+}
+.shazam .menu_items li:nth-child(4) {
+  -webkit-transition-delay: .49s;
+          transition-delay: .49s;
+}
+@media only screen and (min-width:1500px){
+   .menu_items a {
+	font-size: 17.9px;
+	}
+}
