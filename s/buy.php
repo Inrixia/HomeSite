@@ -20,7 +20,7 @@
 			  	$date = date("Y-m-d H:i:s");
 			  	$user_id = $_SESSION['user'];
 			  	$connection = new mysqli('localhost', 'root', 'Sp00ked', 'frosty');
-			  	$sql = "INSERT INTO purchases (user_id, total, datepur, status) VALUES ('$user_id', '$total', '$date', '1')";
+			  	$sql = "INSERT INTO purchases (user_id, total, datepur, status) VALUES ('$user_id', '$total', '$date', 'Ordered')";
 			  	$connection->query($sql);
 					echo "<p class='center'> Purchased <a style='color: #2ba6cb;'>$$total</a></p>
 			  	<a href='/s/index.php'><input type='button' value='Return'></a>
@@ -41,7 +41,7 @@
 			  	}
 		  	} else {
 		  		echo "<p class='center'> Nothing Purchased</p>
-			  	<a href='/s/index.php'><input type='submit' id='full' value='Return'></a>
+			  	<a href='/s/index.php'><input type='submit' value='Return'></a>
 			  	";
 		  	}
 		  ?>

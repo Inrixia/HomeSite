@@ -30,7 +30,7 @@
           <li>
             <a href="../index.php"><i class="fa fa-home"></i> Site Home</a>
           </li>
-          <li class="active">
+          <li>
             <a href="account.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
           </li>
           <li>
@@ -53,7 +53,7 @@
 		        	echo "<li>
             		<a class='user-settings'>Admin Settings</a>
           		</li>
-		        	<li>
+		        	<li class='active'>
 	           		<a href='/s/account/orders.php'><i class='fa fa-truck'></i> Orders</a>
 	         		</li>
 	         		<li>
@@ -64,11 +64,12 @@
           ?>
         </ul>
         <div class="container-fluid">
-          <h1 class="page-header">Dashboard <small>Purchases Overview</small></h1>
+          <h1 class="page-header">Admin Dashboard <small>Orders Overview</small></h1>
           <div class='purchases_container'>
             <table>
 							<tr>
   							<th>ID</th>
+                <th>User</th>
    							<th>Date</th> 
     						<th>Total</th>
     						<th>Status</th>
@@ -76,25 +77,28 @@
             <?php
             	$user_id = $_SESSION['user'];
               $connection = new mysqli('localhost', 'root', 'Sp00ked', 'frosty');
-  						$sql = "SELECT * FROM purchases WHERE user_id='$user_id'";
+  						$sql = "SELECT * FROM purchases";
   						if (!$result = $connection->query($sql)) {}
   						while ($row = $result->fetch_array()) {
   							$id = $row['purchase_id'];
+                $user_id = $row['user_id'];
   							$total = $row['total'];
   							$date = $row['datepur'];
   							$status = $row['status'];
   							echo "
-                  <tr>
-                    <th>$id</th>
-                    <th>$date</th>
-                    <th>$$total</th>
-                    <th>$status</th>
+  	    					<tr>
+  	    						<th>$id</th>
+                    <th>$user_id</th>
+  	    						<th>$date</th>
+  	    						<th>$$total</th>
+  	    						<th>$status</th>
                 ";
                 if ($status == 'Ordered') {
                   echo "
                     <form action='' method='post'>
                       <div class='move'>
                         <a href=''><input name='delete' type='submit' class='button-delete butt' value='Cancel'></a>
+                        <a href=''><input name='ship' type='submit' class='button-add butt' value='Ship'></a>
                         <input style='display: none;' name='purch' value='$id'>
                       </div>
                     </form>

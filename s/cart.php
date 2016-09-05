@@ -17,6 +17,7 @@ require "public/php/cart.php";
     <link href="public/css/main.css" rel="stylesheet">
     <link href="public/css/cart.css" rel="stylesheet">
     <link href="public/css/item.css" rel="stylesheet">
+    <link href="public/css/button.css" rel="stylesheet">
   </head>
   <body>
   <div class="site-img-header"><img class="logoimg" src="public/img/logo-text.png"></div>
