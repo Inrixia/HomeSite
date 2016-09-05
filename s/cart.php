@@ -71,10 +71,9 @@ require "public/php/cart.php";
     <div class="content">
       <?php
         $user_id = $_SESSION['user'];
-        $connection = new mysqli('localhost', 'root', 'Sp00ked', 'frosty');
         $sql = "SELECT * FROM cart WHERE user='$user_id'";
-        if ($result = $connection->query($sql)) {}
-        $num_rows = mysqli_num_rows($result);
+        if (!$resultt = $connection->query($sql)) {}
+        $num_rows = mysqli_num_rows($resultt);
         echo "<table>";
         if ($num_rows > 0) {
           echo "<tr><th class='heading'>Your Cart - ($num_rows)</th></tr>
@@ -87,7 +86,6 @@ require "public/php/cart.php";
           <th>Total</th>
           </tr>
           ";
-          if (!$resultt = $connection->query($sql)) {}
           $overtotal = '';
           while ($roww = $resultt->fetch_array()) {
             $id = $roww['item_id'];
@@ -145,7 +143,7 @@ require "public/php/cart.php";
             </table>
             <form align='right' action='/s/buy.php' method='post'>
               <input type='submit' class='butt button-buy' name='buy' value='Checkout'>
-              <input style='display: none;' name='total' value='<?php echo '$overtotal' ?>'>
+              <input style='display: none;' name='total' value='$overtotal'>
             </form>
           ";
         } else {

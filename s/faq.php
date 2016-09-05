@@ -55,9 +55,6 @@ session_start();
       } else {
         echo ("
           <ul class='nav navbar-right top-nav'>
-            <li>
-              <a href='/s/cart.php' class='dropdown-toggle'><i class='fa fa-fw fa-shopping-cart'></i> Cart ($num_rows)</a>
-            </li>
             <li class='dropdown'>
               <a href='/s/login'><i class='login-button fa fa-fw fa-gear'></i> Login</a>
             </li>
