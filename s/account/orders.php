@@ -91,17 +91,27 @@
                     <th>$user_id</th>
   	    						<th>$date</th>
   	    						<th>$$total</th>
-  	    						<th>$status</th>
+                ";
+                if ($status == 'Cancelled') {
+                  $style = 'red';
+                } elseif ($status == 'Shipped') {
+                  $style = 'green';
+                } else {
+                  $style = 'orange';
+                }
+                echo "
+  	    					<th style='color: $style'>$status</th>
                 ";
                 if ($status == 'Ordered') {
-                  echo "
-                    <form action='' method='post'>
-                      <div class='move'>
-                        <a href=''><input name='delete' type='submit' class='button-delete butt' value='Cancel'></a>
-                        <a href=''><input name='ship' type='submit' class='button-add butt' value='Ship'></a>
-                        <input style='display: none;' name='purch' value='$id'>
-                      </div>
-                    </form>
+                  echo "<th>
+                      <form action='' method='post'>
+                        <div class='move'>
+                          <a href=''><input name='delete' type='submit' class='button-delete butt' value='Cancel'></a>
+                          <a href=''><input name='ship' type='submit' class='button-add butt' value='Ship'></a>
+                          <input style='display: none;' name='purch' value='$id'>
+                        </div>
+                      </form>
+                    </th>
                   </tr>
                   ";
                 }
