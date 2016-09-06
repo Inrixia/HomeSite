@@ -24,39 +24,41 @@
   use xPaw\MinecraftQuery;
   use xPaw\MinecraftQueryException;
   
-  $Query = new MinecraftQuery( );
+  $QuerySky = new MinecraftQuery( );
+  $QueryRegrow = new MinecraftQuery( );
+  $QueryBlue = new MinecraftQuery( );
   try
   {
-    $Query->Connect( 'up.home', 25568 );
+    $QueryRegrow->Connect( 'up.home', 25567 );
+    $QuerySky->Connect( 'up.home', 25568 );
+    $QueryBlue->Connect( 'up.home', 25569 );
 
-      $infot = $Query->GetInfo( );
-      $playerst = $Query->GetPlayers();
-      $plyrt = $infot['Players'] . " / " . $infot['MaxPlayers'] . " People Playing...";
-      $statt = "Online";
-      $numt = "a";
+      $SkyInfo = $QuerySky->GetInfo( );
+      $SkyPlayers = $QuerySky->GetPlayers();
+      $SkyPlyr = $SkyInfo['Players'] . " / " . $SkyInfo['MaxPlayers'] . " People Playing...";
+      $SkyStatt = "Online";
+      $SkyNum = "a";
+     
+      $RegrowInfo = $QueryRegrow->GetInfo( );
+      $RegrowPlayers = $QueryRegrow->GetPlayers();
+      $RegrowPlyr = $RegrowInfo['Players'] . " / " . $RegrowInfo['MaxPlayers'] . " People Playing...";
+      $RegrowStatt = "Online";
+      $RegrowNum = "a";
+
+      $BlueInfo = $QueryBlue->GetInfo( );
+      $BluePlayers = $QueryBlue->GetPlayers();
+      $BluePlyr = $BlueInfo['Players'] . " / " . $BlueInfo['MaxPlayers'] . " People Playing...";
+      $BlueStatt = "Online";
+      $BlueNum = "a";
   }
   catch( MinecraftQueryException $e )
   {
-  	$Rstatt = $e->getMessage( );
-  	$Ostatt = ("Offline");
-  }
-
-
-  $Query = new MinecraftQuery( );
-  try
-  {
-    $Query->Connect( 'up.home', 25567 );
-
-      $ainfot = $Query->GetInfo( );
-      $twoplayerst = $Query->GetPlayers();
-      $aplyrt = $ainfot['Players'] . " / " . $ainfot['MaxPlayers'] . " People Playing...";
-      $astatt = "Online";
-      $anumt = "a";
-  }
-  catch( MinecraftQueryException $e )
-  {
-  	$TwoRstatt = $e->getMessage( );
-  	$TwoOstatt = ("Offline");
+  	$SkyOff = $e->getMessage( );
+  	$SkyOffStat = ("Offline");
+  	$RegrowOff = $e->getMessage( );
+  	$RegrowOffStat = ("Offline");
+  	$BlueOff = $e->getMessage( );
+  	$BlueOffStat = ("Offline");
   }
 ?>
 
@@ -67,37 +69,51 @@
   			<img src="http://i.imgur.com/M9ECrbH.png" class="img-responsive fade-in one">
   			<p class="random fade-in two"></p>
 		</div>
-		<div align="middle" class="Serv1">
+	</div>
+	<div class='row'>
+		<div align="middle" class="Sky Cover col-xs-6">
 			<div class="jumbotron detail fade-in three">
-		    	<h3 class="picin motd"><?php echo MineToWeb($infot['HostName']);?></h3>
-		    	<p class="label label-success"><?php echo $statt ?></p>
-		    	<p class="plyr"><?php echo $plyrt ?></p>
-		  	</div>
-		  	<div class="players">
-				<?php foreach ($playerst as $playert): ?>
-				    <?php echo "<div class=\"col-sm-2 player fade-in\">" ?>
-						<img src="<?php echo "https://cravatar.eu/" . "helmhead" . "/" . $playert . "/96" ?>" class="img-rounded picintwo">
-		            	<p><?php echo $playert ?></p>
-		    		</div>
+		   	<h3 class="picin motd"><?php echo MineToWeb($SkyInfo['HostName']);?></h3>
+		   	<p class="label label-success"><?php echo $SkyStat ?></p>
+		   	<p class="plyr"><?php echo $SkyPlyr ?></p>
+		 	</div>
+			<div class="players">
+			<?php foreach ($SkyPlayers as $SkyPlyr): ?>
+			  <?php echo "<div class=\"col-sm-2 player fade-in\">" ?>
+					<img src="<?php echo "https://cravatar.eu/" . "helmhead" . "/" . $SkyPlyr . "/96" ?>" class="img-rounded picintwo">
+			 		<p><?php echo $SkyPlyr ?></p>
+				</div>
 			<?php endforeach ?>
+			</div>
+		</div>
+		<div align="middle" class="Regrow Cover col-xs-6">
+			<div class="jumbotron detail fade-in three">
+			 	<h3 class="picin motd"><?php echo MineToWeb($RegrowInfo['HostName']);?></h3>
+			 	<p class="label label-success"><?php echo $RegrowStat ?></p>
+			 	<p class="plyr"><?php echo $RegrowPlyr ?></p>
+			</div>
+			<div class="players">
+				<?php foreach ($RegrowPlayers as $RegrowPlyr): ?>
+			    <?php echo "<div class=\"col-sm-2 player fade-in\">" ?>
+						<img src="<?php echo "https://cravatar.eu/" . "helmhead" . "/" . $RegrowPlyr . "/96" ?>" class="img-rounded picintwo">
+			     	<p><?php echo $RegrowPlyr ?></p>
+			 		</div>
+				<?php endforeach ?>
 			</div>
 		</div>
 	</div>
-	<div align="middle" class="Serv2">
-			<div class="jumbotron detail fade-in three">
-		    	<h3 class="picin motd"><?php echo MineToWeb($ainfot['HostName']);?></h3>
-		    	<p class="label label-success"><?php echo $astatt ?></p>
-		    	<p class="plyr"><?php echo $aplyrt ?></p>
-		  	</div>
-		  	<div class="players">
-				<?php foreach ($twoplayerst as $aplayert): ?>
-				    <?php echo "<div class=\"col-sm-2 player fade-in\">" ?>
-						<img src="<?php echo "https://cravatar.eu/" . "helmhead" . "/" . $aplayert . "/96" ?>" class="img-rounded picintwo">
-		            	<p><?php echo $aplayert ?></p>
-		    		</div>
-			<?php endforeach ?>
-			</div>
+	<div align="middle" class="Blue Cover">
+		<div class="jumbotron detail fade-in three">
+		 	<h3 class="picin motd"><?php echo MineToWeb($BlueInfo['HostName']);?></h3>
+		 	<p class="label label-success"><?php echo $BlueStat ?></p>
+		 	<p class="plyr"><?php echo $BluePlyr ?></p>
 		</div>
+		<?php foreach ($BluePlayers as $BluePlyr): ?>
+		  <?php echo "<div class='col-sm-2 player fade-in'>" ?>
+				<img src="<?php echo "https://cravatar.eu/" . "helmhead" . "/" . $BluePlyr . "/96" ?>" class="img-rounded picintwo">
+		   	<p><?php echo $BluePlyr ?></p>
+			</div>
+		<?php endforeach ?>
 	</div>
 	<div class="butt footer navbar-fixed-bottom">
 		<a href="./" class="btn btn-primary col-centered" role="button">Go Back</a>

@@ -10,6 +10,7 @@ body {
 .detail {
   padding-top: 5px;
   padding-bottom: 5px;
+  overflow:auto !important;
 }
 
 .motd {
@@ -41,12 +42,6 @@ body {
     100% {top: 0px;}
 }
 
-
-
-.Serv1 {
-  padding-bottom: 150px;
-}
-
-.Serv2 {
-  padding-top: 150px;
+.Cover {
+  overflow:auto !important;
 }
